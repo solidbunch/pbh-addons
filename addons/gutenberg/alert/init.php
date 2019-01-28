@@ -90,7 +90,7 @@ add_action( 'init', function () {
 	// ---------------------------------------------------------------------------------
 	
 	if ( function_exists( 'wp_set_script_translations' ) ) {
-		wp_set_script_translations( 'pbh-blocks-alert', 'pbh-blocks-alert' );
+		wp_set_script_translations( 'pbh-blocks-alert-editor', 'pbh-blocks-alert' );
 	}
 	
 } );
