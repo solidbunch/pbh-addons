@@ -3,9 +3,7 @@
  * __( 'My text', 'textdomain')
  */
 const { __, _x, _n, _nx } = wp.i18n;
-
-console.log( 'Alert Gutenberg: block.js' );
-
+ 
 /**
  * Import Gutenberg Components to use
  */
@@ -29,9 +27,9 @@ const {
 	registerBlockType
 } = wp.blocks;
 
-registerBlockType('pbh-blocks/alert-gutenberg', {
-	title: __('PBH Alert', 'page-builder-hub'),
-	description: __('Customizable Alert', 'page-builder-hub'),
+registerBlockType('pbh-blocks/alert', {
+	title: __('PBH Alert', 'pbh-blocks-alert'),
+	description: __('Customizable Alert', 'pbh-blocks-alert'),
 	icon: <svg viewBox="0 0 32 32" version="1.1">
 		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 			<rect x="0.5" stroke="#4A4A4A" y="8.5" width="31" height="15" rx="3"></rect>
@@ -40,7 +38,7 @@ registerBlockType('pbh-blocks/alert-gutenberg', {
 			<circle cx="24" stroke="#4A4A4A" cy="16" r="1.5"></circle>
 		</g>
 	</svg>,
-	category: 'common',
+	category: 'pbh-blocks',
 
 	supports: {
 		// add a possibility to change block ID
@@ -118,15 +116,15 @@ registerBlockType('pbh-blocks/alert-gutenberg', {
 			 * Inspector controls items will be rendered in sidebar when you click on component
 			 */
 			<InspectorControls>
-				<PanelBody title={__('Attributes', 'page-builder-hub')} initialOpen={true}>
+				<PanelBody title={__('Attributes', 'pbh-blocks-alert')} initialOpen={true}>
 					<SelectControl
-						label={__('Type', 'page-builder-hub')}
+						label={__('Type', 'pbh-blocks-alert')}
 						value={type}
 						options={[
-							{label: __('Success', 'page-builder-hub'), value: 'success'},
-							{label: __('Info', 'page-builder-hub'), value: 'info'},
-							{label: __('Warning', 'page-builder-hub'), value: 'warning'},
-							{label: __('Danger', 'page-builder-hub'), value: 'danger'},
+							{label: __('Success', 'pbh-blocks-alert'), value: 'success'},
+							{label: __('Info', 'pbh-blocks-alert'), value: 'info'},
+							{label: __('Warning', 'pbh-blocks-alert'), value: 'warning'},
+							{label: __('Danger', 'pbh-blocks-alert'), value: 'danger'},
 						]}
 						onChange={(value) => setAttributes({type: value})}
 					/>
@@ -137,7 +135,7 @@ registerBlockType('pbh-blocks/alert-gutenberg', {
 			 * This element will be rendered directly in content editor
 			 */
 			<div style={{textAlign: align}}
-				 className={className + ' ff pbh_alert_gutenberg pbh-alert-' + type + ' pbh-id-' + id}>
+				 className={className + ' ff pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
 				<i className="pbh-icon"/>
 				<RichText
 					value={content}
@@ -162,7 +160,7 @@ registerBlockType('pbh-blocks/alert-gutenberg', {
 
 		return (
 			<div style={{textAlign: align}}
-				 className={ 'ff pbh_alert_gutenberg pbh-alert-' + type + ' pbh-id-' + id}>
+				 className={ 'ff pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
 				<i className="pbh-icon"/>
 				<RichText.Content 
 					tagName='div'
