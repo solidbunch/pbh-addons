@@ -8,7 +8,6 @@ add_action( 'enqueue_block_editor_assets', function () {
 	//$assets_url = FF_SHORTCODES()->plugin_url . FF_SHORTCODES()->assets_dir . '/' . $block_name . '/';
 	$block_url  = PBH_ADDONS_PLUGIN_URL . '/addons/gutenberg/' . $block_name . '/';
 	
-	
 	// Block Scripts
 	/*
 	wp_enqueue_script(

@@ -50,14 +50,16 @@ module.exports = function () {
 			    // Move images from src to build
                 {
                     test: /\.(png|jpg|svg|gif)$/i,
-                    use: [{
+                    use: (file) => ([{
                         loader: 'file-loader',
                         options: {
-                          name: '[path]../../assets/img/[name].[ext]',
-                          //publicPath: '../../img/'       // override the default path
+                          name: '[name].[ext]',
+                          outputPath: path.relative( __dirname, path.dirname(file.resource).replace(/src[\\]img$/, '') ).replace(/^\.\./, '.').replace(/\\/g, '/') + '/assets/img/',
+                          publicPath: '../img/',
                         },
-                    }]
+                    }])
                 },
+                
                 // Compile all .scss files to plain old css
                 {
                     test: /\.(sass|scss)$/,
