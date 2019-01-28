@@ -2,7 +2,7 @@
 
 // enqueue admin scripts and styles
 add_action( 'enqueue_block_editor_assets', function () {
-	
+
 	$block_name = 'alert-gutenberg';
 	//$block_url  = FF_SHORTCODES()->plugin_url . FF_SHORTCODES()->gutenberg_blocks_dir . '/' . $block_name . '/';
 	//$assets_url = FF_SHORTCODES()->plugin_url . FF_SHORTCODES()->assets_dir . '/' . $block_name . '/';

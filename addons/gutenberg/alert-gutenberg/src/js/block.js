@@ -40,7 +40,7 @@ registerBlockType('pbh-blocks/alert-gutenberg', {
 			<circle cx="24" stroke="#4A4A4A" cy="16" r="1.5"></circle>
 		</g>
 	</svg>,
-	category: 'pbh',
+	category: 'common',
 
 	supports: {
 		// add a possibility to change block ID
