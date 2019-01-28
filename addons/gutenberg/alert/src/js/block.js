@@ -3,7 +3,9 @@
  * __( 'My text', 'textdomain')
  */
 const { __, _x, _n, _nx } = wp.i18n;
- 
+
+console.log( 'Alert Gutenberg: block.js' );
+
 /**
  * Import Gutenberg Components to use
  */
@@ -135,7 +137,7 @@ registerBlockType('pbh-blocks/alert', {
 			 * This element will be rendered directly in content editor
 			 */
 			<div style={{textAlign: align}}
-				 className={className + ' ff pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
+				 className={className + ' pbh_root pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
 				<i className="pbh-icon"/>
 				<RichText
 					value={content}
@@ -160,7 +162,7 @@ registerBlockType('pbh-blocks/alert', {
 
 		return (
 			<div style={{textAlign: align}}
-				 className={ 'ff pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
+				 className={ 'pbh_root pbh_alert_block pbh-alert-' + type + ' pbh-id-' + id}>
 				<i className="pbh-icon"/>
 				<RichText.Content 
 					tagName='div'
