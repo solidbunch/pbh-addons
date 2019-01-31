@@ -21,21 +21,5 @@ if ( ! class_exists( 'PBH_Alert_Gutenberg' ) ) {
 			
 		}
 		
-		
-		/**
-		 * Register Block Type
-		 */
-		public function register_block_type() {
-			
-			register_block_type( "pbh-blocks/{$this->slug}", [
-				'editor_script' => "pbh-blocks-{$this->slug}-editor", // backend only
-				'editor_style'  => "pbh-blocks-{$this->slug}-editor", // backend only
-				'style'         => "pbh-blocks-{$this->slug}-front",  // backend + frontend
-				'script'        => "pbh-blocks-{$this->slug}-front",  // backend + frontend
-				//'attributes'      => [],               // for dynamic Block
-				//'render_callback' => function () {},   // for dynamic Block
-			] );
-		}
-		
 	}
 }
