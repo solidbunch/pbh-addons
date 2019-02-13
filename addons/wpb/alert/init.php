@@ -6,6 +6,7 @@
 
 use PBH\Model\Abstracts\WPBAbstract;
 
+/*
 if ( ! class_exists( 'PBH_Alert_Gutenberg' ) ) {
 	class PBH_Alert_Gutenberg extends GutenbergAbstract {
 		
@@ -21,6 +22,7 @@ if ( ! class_exists( 'PBH_Alert_Gutenberg' ) ) {
 	}
 }
 
+*/
 
 if ( !class_exists( 'PBH_Alert_WPB' ) ) {
 	class PBH_Alert_WPB extends WPBAbstract {
