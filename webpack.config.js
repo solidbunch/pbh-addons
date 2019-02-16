@@ -1,5 +1,6 @@
 const configs = [
     require('./build/scripts_js.config'),
+    require('./build/style_css.config'),
     require('./build/block_js.config'),
     require('./build/block_editor_css.config'),
     require('./build/block_style_css.config')

@@ -2,9 +2,9 @@
 
 return array(
 	'name'        => esc_html__( 'Alert', '{domain}' ),
-	'base'        => 'alert',
-	'icon'        => 'assets/alerts.svg',
-	'category'    => esc_html__( 'Theme Elements', '{domain}' ),
+	'base'        => 'pbh_alert',
+	'icon'        => '/icon.svg',
+	'category'    => esc_html__( 'Page Builder Hub', '{domain}' ),
 	'description' => esc_html__( 'Add an alert', '{domain}' ),
 	'params'      => array(
 
